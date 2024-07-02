@@ -1,0 +1,54 @@
+[debug] [2024-07-02T08:21:31.367Z] ----------------------------------------------------------------------
+[debug] [2024-07-02T08:21:31.368Z] Command:       /usr/local/bin/node /Users/ming/.npm-global/bin/firebase deploy --only firestore:rules,storage
+[debug] [2024-07-02T08:21:31.368Z] CLI Version:   13.12.0
+[debug] [2024-07-02T08:21:31.368Z] Platform:      darwin
+[debug] [2024-07-02T08:21:31.369Z] Node Version:  v20.14.0
+[debug] [2024-07-02T08:21:31.369Z] Time:          Tue Jul 02 2024 15:21:31 GMT+0700 (Indochina Time)
+[debug] [2024-07-02T08:21:31.369Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-02T08:21:31.407Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-02T08:21:31.407Z] > authorizing via signed-in user (6638181021@student.chula.ac.th)
+[debug] [2024-07-02T08:21:31.408Z] [iam] checking project friendlyeats-codelab-6d015 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-07-02T08:21:31.408Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-codelab-6d015:testIamPermissions [none]
+[debug] [2024-07-02T08:21:31.409Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-codelab-6d015:testIamPermissions x-goog-quota-user=projects/friendlyeats-codelab-6d015
+[debug] [2024-07-02T08:21:31.409Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-codelab-6d015:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-07-02T08:21:32.615Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-codelab-6d015:testIamPermissions 200
+[debug] [2024-07-02T08:21:32.615Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-codelab-6d015:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[info] 
+[info] === Deploying to 'friendlyeats-codelab-6d015'...
+[info] 
+[info] i  deploying storage, firestore 
+[info] i  storage: ensuring required API firebasestorage.googleapis.com is enabled... 
+[debug] [2024-07-02T08:21:32.617Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/friendlyeats-codelab-6d015/services/firebasestorage.googleapis.com [none]
+[debug] [2024-07-02T08:21:32.617Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/friendlyeats-codelab-6d015/services/firebasestorage.googleapis.com x-goog-quota-user=projects/friendlyeats-codelab-6d015
+[debug] [2024-07-02T08:21:34.304Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/friendlyeats-codelab-6d015/services/firebasestorage.googleapis.com 200
+[debug] [2024-07-02T08:21:34.304Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/friendlyeats-codelab-6d015/services/firebasestorage.googleapis.com [omitted]
+[info] ✔  storage: required API firebasestorage.googleapis.com is enabled 
+[debug] [2024-07-02T08:21:34.305Z] >>> [apiv2][query] GET https://firebasestorage.googleapis.com/v1alpha/projects/friendlyeats-codelab-6d015/defaultBucket [none]
+[debug] [2024-07-02T08:21:35.469Z] <<< [apiv2][status] GET https://firebasestorage.googleapis.com/v1alpha/projects/friendlyeats-codelab-6d015/defaultBucket 200
+[debug] [2024-07-02T08:21:35.469Z] <<< [apiv2][body] GET https://firebasestorage.googleapis.com/v1alpha/projects/friendlyeats-codelab-6d015/defaultBucket {"name":"projects/friendlyeats-codelab-6d015/defaultBucket","location":"ASIA-SOUTHEAST1","bucket":{"name":"projects/friendlyeats-codelab-6d015/buckets/friendlyeats-codelab-6d015.appspot.com"}}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2024-07-02T08:21:35.472Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015:test [none]
+[debug] [2024-07-02T08:21:35.472Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015:test [omitted]
+[debug] [2024-07-02T08:21:37.175Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015:test 200
+[debug] [2024-07-02T08:21:37.176Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015:test {}
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2024-07-02T08:21:37.181Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015:test [none]
+[debug] [2024-07-02T08:21:37.181Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015:test [omitted]
+[debug] [2024-07-02T08:21:38.515Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015:test 200
+[debug] [2024-07-02T08:21:38.516Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2024-07-02T08:21:38.518Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015/releases pageSize=10&pageToken=
+[debug] [2024-07-02T08:21:38.829Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015/releases 200
+[debug] [2024-07-02T08:21:38.829Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015/releases {"releases":[{"name":"projects/friendlyeats-codelab-6d015/releases/cloud.firestore","rulesetName":"projects/friendlyeats-codelab-6d015/rulesets/d9da6f08-bd4b-46d6-ad2f-bebe41d3d31c","createTime":"2024-07-02T08:04:32.621739Z","updateTime":"2024-07-02T08:04:32.621739Z"},{"name":"projects/friendlyeats-codelab-6d015/releases/firebase.storage/friendlyeats-codelab-6d015.appspot.com","rulesetName":"projects/friendlyeats-codelab-6d015/rulesets/1c58c8ae-a763-4938-94e4-ba3c56a27740","createTime":"2024-07-02T08:05:31.736504Z","updateTime":"2024-07-02T08:05:31.736504Z"}]}
+[debug] [2024-07-02T08:21:38.860Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015/rulesets/1c58c8ae-a763-4938-94e4-ba3c56a27740 [none]
+[debug] [2024-07-02T08:21:40.328Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015/rulesets/1c58c8ae-a763-4938-94e4-ba3c56a27740 200
+[debug] [2024-07-02T08:21:40.329Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-codelab-6d015/rulesets/1c58c8ae-a763-4938-94e4-ba3c56a27740 [omitted]
+[debug] [2024-07-02T08:21:40.332Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-codelab-6d015 [none]
+[debug] [2024-07-02T08:21:40.842Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-codelab-6d015 200
+[debug] [2024-07-02T08:21:40.843Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-codelab-6d015 {"projectId":"friendlyeats-codelab-6d015","projectNumber":"898698298867","displayName":"FriendlyEats Codelab","name":"projects/friendlyeats-codelab-6d015","resources":{"hostingSite":"friendlyeats-codelab-6d015","storageBucket":"friendlyeats-codelab-6d015.appspot.com","locationId":"asia-southeast1"},"state":"ACTIVE","etag":"1_e65ac47d-a7b3-45e5-927c-7db83fea4881"}
+[debug] [2024-07-02T08:21:40.844Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/898698298867:getIamPolicy [none]
+[debug] [2024-07-02T08:21:42.108Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/898698298867:getIamPolicy 200
+[debug] [2024-07-02T08:21:42.109Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/898698298867:getIamPolicy {"version":1,"etag":"BwYcPy0UYYs=","bindings":[{"role":"roles/editor","members":["serviceAccount:friendlyeats-codelab-6d015@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-898698298867@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-5swqh@friendlyeats-codelab-6d015.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-5swqh@friendlyeats-codelab-6d015.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-898698298867@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firebasestorage.serviceAgent","members":["serviceAccount:service-898698298867@gcp-sa-firebasestorage.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-898698298867@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-5swqh@friendlyeats-codelab-6d015.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:6638181021@student.chula.ac.th"]},{"role":"roles/storage.admin","members":["serviceAccount:firebase-adminsdk-5swqh@friendlyeats-codelab-6d015.iam.gserviceaccount.com"]}]}
